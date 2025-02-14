@@ -7,16 +7,10 @@
 
 {% block css_files %}
 <link rel="stylesheet" href="{% static "blog/index.css" %}"/>
+<link rel="stylesheet" href="{% static "blog/posts.css" %}"/>
 {% endblock %}
 
 {%block content%}
-    <header id="main-navigation">
-        <h1><a href="">Yash Blog</a></h1>    
-        <nav>
-            <a href ="">All Posts</a>
-        </nav>
-    </header>
-
     <section id="welcome">
         <header>
             <img src="{% static "blog/images/my_image.jpg" %}" alt="Yash - the author of this blog">
@@ -28,19 +22,7 @@
     <section id="latest-posts">
         <h2> My Latest thoughts</h2>
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="{% static "blog/images/tree.jpg" %}" alt="Mountain hiking" />
-                        <div class="post__content">
-                            <h3>Mountain hiking</h3>
-                            <p>There's nothing like the views you get while hiking in the mountains!
-                                I wasn't even prepared for what happened whilst I was enjoying the view!
-                            </p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+            {% include "blog/includes/post.html" %}
         </ul>
     </section>
 
