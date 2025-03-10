@@ -16,7 +16,7 @@
     <section id="summary">
         <h2>Post Title</h2>
         <article>
-            <img src="{% static "blog/images/forest.jpg" %}" alt="Post Title" />
+            <img src="{% static "blog/images/"|add:post.image_name %}" alt="Post Title" />
             <address>By Yash Rawat</address>
             <div>Last Updated on <time>July 10th</time></div>
         </article>
